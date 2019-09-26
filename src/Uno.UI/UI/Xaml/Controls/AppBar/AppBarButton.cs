@@ -1,4 +1,4 @@
-﻿#if XAMARIN
+﻿#if XAMARIN || NET461
 using System;
 using System.Collections.Generic;
 using System.Text;
