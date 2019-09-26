@@ -46,6 +46,8 @@ namespace Windows.UI.Xaml.Controls
 
 			Loaded += (s, e) => RegisterEvents();
 			Unloaded += (s, e) => UnregisterEvents();
+
+			DefaultStyleKey = typeof(CommandBar);
 		}
 
 #if __ANDROID__ || __IOS__

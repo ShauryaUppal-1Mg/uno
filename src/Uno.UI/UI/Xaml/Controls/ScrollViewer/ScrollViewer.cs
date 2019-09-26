@@ -1,5 +1,5 @@
 ﻿#if NET461
-#pragma warning disable CS0067 
+#pragma warning disable CS0067
 #endif
 
 using System;
@@ -57,7 +57,10 @@ namespace Windows.UI.Xaml.Controls
 #endif
 		}
 
-		public ScrollViewer() { }
+		public ScrollViewer()
+		{
+			DefaultStyleKey = typeof(ScrollViewer);
+		}
 
 		void IFrameworkTemplatePoolAware.OnTemplateRecycled()
 		{
@@ -467,7 +470,7 @@ namespace Windows.UI.Xaml.Controls
 		{
 			var view = dependencyObject as ScrollViewer;
 
-			view?.OnBringIntoViewOnFocusChangeChangedPartial((bool) args.NewValue);
+			view?.OnBringIntoViewOnFocusChangeChangedPartial((bool)args.NewValue);
 		}
 
 		partial void OnBringIntoViewOnFocusChangeChangedPartial(bool newValue);
@@ -531,7 +534,7 @@ namespace Windows.UI.Xaml.Controls
 		/// <remarks>Used in the context of member initialization</remarks>
 		public
 #if !__WASM__ && !__MACOS__
-			new 
+			new
 #endif
 			void Add(View view)
 		{

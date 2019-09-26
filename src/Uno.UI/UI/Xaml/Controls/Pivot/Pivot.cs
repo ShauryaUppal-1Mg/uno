@@ -27,6 +27,11 @@ namespace Windows.UI.Xaml.Controls
 
 		private bool _isUWPTemplate;
 
+		public Pivot()
+		{
+			DefaultStyleKey = typeof(Pivot);
+		}
+
 		protected override void OnApplyTemplate()
 		{
 			base.OnApplyTemplate();
