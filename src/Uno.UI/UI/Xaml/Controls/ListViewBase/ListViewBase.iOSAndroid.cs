@@ -48,10 +48,10 @@ namespace Windows.UI.Xaml.Controls
 				ItemsPanelRoot.SetValue(DataContextProperty, DataContext, DependencyPropertyValuePrecedences.Inheritance);
 				InitializeNativePanel();
 
-				if (ScrollViewer?.Style?.Precedence == DependencyPropertyValuePrecedences.ImplicitStyle)
-				{
-					throw new InvalidOperationException($"Performance hit: {this} is using a ScrollViewer in its template with a default style, which would break virtualization. A Style containing {nameof(ListViewBaseScrollContentPresenter)} must be used.");
-				}
+				//if (ScrollViewer?.Style?.Precedence == DependencyPropertyValuePrecedences.ImplicitStyle) //TODO: this, properly
+				//{
+				//	throw new InvalidOperationException($"Performance hit: {this} is using a ScrollViewer in its template with a default style, which would break virtualization. A Style containing {nameof(ListViewBaseScrollContentPresenter)} must be used.");
+				//}
 
 				if (ScrollViewer != null)
 				{
@@ -61,11 +61,11 @@ namespace Windows.UI.Xaml.Controls
 			}
 			else
 			{
-				if (ScrollViewer?.Style == Uno.UI.GlobalStaticResources.ListViewBaseScrollViewerStyle)
-				{
-					// We're not using NativeListViewBase so we need a 'real' ScrollViewer
-					ScrollViewer.Style = Uno.UI.GlobalStaticResources.DefaultScrollViewerStyle;
-				}
+				//if (ScrollViewer?.Style == Uno.UI.GlobalStaticResources.ListViewBaseScrollViewerStyle) //TODO: this, too, properly
+				//{
+				//	// We're not using NativeListViewBase so we need a 'real' ScrollViewer
+				//	ScrollViewer.Style = Uno.UI.GlobalStaticResources.DefaultScrollViewerStyle;
+				//}
 			}
 		}
 
