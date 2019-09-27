@@ -1025,7 +1025,7 @@ namespace Windows.UI.Xaml
 		/// <summary>
 		/// Do a tree walk to find the correct values of StaticResource and ThemeResource assignations.
 		/// </summary>
-		private void UpdateResourceBindings()
+		internal void UpdateResourceBindings()
 		{
 			if (_resourceBindings == null || _resourceBindings.Count == 0)
 			{
