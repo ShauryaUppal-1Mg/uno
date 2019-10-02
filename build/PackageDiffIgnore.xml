@@ -211,6 +211,12 @@
 				<Member 
 					fullName="Windows.UI.Xaml.Controls.UnoUIWebView"
 					reason="UIWebView support has been removed by Apple"/>
+				<Member 
+					fullName="Uno.UI.IUnoViewParent"
+					reason="Removed internal stuff."/>
+				<Member 
+					fullName="Uno.UI.UnoGestureDetector"
+					reason="Removed internal stuff."/>
 			</Types>
 
 			<Methods>
@@ -306,47 +312,6 @@
 				<Member 
 					fullName="Windows.UI.Xaml.Style Uno.UI.GlobalStaticResources.get___ImplicitStyle_Windows_UI_Xaml_Controls_AppBarSeparator()"
 					reason="Implicit style moved to GenericStyles.cs" />
-			</Methods>
-			
-			<Properties>
-				<Member 
-					fullName="Android.Views.View Windows.UI.Xaml.Controls.Popup::Anchor()"
-					reason="Invalid property visibility"/>
-				<Member 
-					fullName="System.String Windows.UI.Xaml.Controls.TextBoxView::BindableText()"
-					reason="Removed obsolete method. TextBoxView is internal on UWP, shouldn't normally be created or manipulated by user code."/>
-				<Member 
-					fullName="System.Boolean Uno.UI.UnoViewGroup::HasNonIdentityStaticTransformation()"
-					reason="Removed unneeded pseudo-internal property" />
-				<Member 
-					fullName="System.Boolean Uno.UI.UnoViewGroup::IsAnimationInProgress()"
-					reason="Removed unneeded pseudo-internal property" />
-				<Member
-					fullName="Windows.UI.Xaml.ResourceDictionary[] Windows.UI.Xaml.ResourceDictionary::MergedDictionaries()"
-					reason="Property type fixed to match UWP" />
-				<Member 
-					fullName="Windows.UI.Xaml.Style Uno.UI.GlobalStaticResources::EllipsisButton()"
-					reason="Invalid global style renamed to align with CommandBar" />
-				<Member 
-					fullName="Windows.UI.Xaml.Style Uno.UI.GlobalStaticResources::__ImplicitStyle_Windows_UI_Xaml_Controls_AppBarToggleButton()"
-					reason="Implicit style moved to GenericStyles.cs" />
-				<Member 
-					fullName="Windows.UI.Xaml.Style Uno.UI.GlobalStaticResources::__ImplicitStyle_Windows_UI_Xaml_Controls_AppBarSeparator()"
-					reason="Implicit style moved to GenericStyles.cs" />	
-			</Properties>
-		</IgnoreSet>
-		
-		<IgnoreSet baseVersion="2.0.0">
-			<Types>
-				<Member 
-					fullName="Uno.UI.IUnoViewParent"
-					reason="Removed internal stuff."/>
-				<Member 
-					fullName="Uno.UI.UnoGestureDetector"
-					reason="Removed internal stuff."/>
-			</Types>
-
-			<Methods>
 				<Member 
 					fullName="System.Void Windows.UI.Input.PointerPointProperties..ctor()"
 					reason="Invalid visibility."/>
@@ -456,8 +421,32 @@
 					fullName="System.Int32 Windows.UI.Xaml.Input.ManipulationModes::value__"
 					reason="Enum was a int instead of uint like UWP"/>
 			</Fields>
-
+			
 			<Properties>
+				<Member 
+					fullName="Android.Views.View Windows.UI.Xaml.Controls.Popup::Anchor()"
+					reason="Invalid property visibility"/>
+				<Member 
+					fullName="System.String Windows.UI.Xaml.Controls.TextBoxView::BindableText()"
+					reason="Removed obsolete method. TextBoxView is internal on UWP, shouldn't normally be created or manipulated by user code."/>
+				<Member 
+					fullName="System.Boolean Uno.UI.UnoViewGroup::HasNonIdentityStaticTransformation()"
+					reason="Removed unneeded pseudo-internal property" />
+				<Member 
+					fullName="System.Boolean Uno.UI.UnoViewGroup::IsAnimationInProgress()"
+					reason="Removed unneeded pseudo-internal property" />
+				<Member
+					fullName="Windows.UI.Xaml.ResourceDictionary[] Windows.UI.Xaml.ResourceDictionary::MergedDictionaries()"
+					reason="Property type fixed to match UWP" />
+				<Member 
+					fullName="Windows.UI.Xaml.Style Uno.UI.GlobalStaticResources::EllipsisButton()"
+					reason="Invalid global style renamed to align with CommandBar" />
+				<Member 
+					fullName="Windows.UI.Xaml.Style Uno.UI.GlobalStaticResources::__ImplicitStyle_Windows_UI_Xaml_Controls_AppBarToggleButton()"
+					reason="Implicit style moved to GenericStyles.cs" />
+				<Member 
+					fullName="Windows.UI.Xaml.Style Uno.UI.GlobalStaticResources::__ImplicitStyle_Windows_UI_Xaml_Controls_AppBarSeparator()"
+					reason="Implicit style moved to GenericStyles.cs" />
 				<Member 
 					fullName="System.Boolean Uno.UI.UnoViewGroup::HasNonIdentityStaticTransformation()"
 					reason="Removed internal stuff."/>
